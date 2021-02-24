@@ -9,7 +9,7 @@
 #include <imgui.h>
 #include "vulkanexamplebase.h"
 #include "VulkanglTFModel.h"
-
+#include "test_class.h"
 #define ENABLE_VALIDATION false
 
 // Options and values to display/toggle from the UI
@@ -361,6 +361,9 @@ public:
 		ImGui::SetNextWindowPos(ImVec2(650, 20), ImGuiSetCond_FirstUseEver);
 		ImGui::ShowDemoWindow();
 
+		TestWindow test;
+		test.testFrame();
+		
 		// Render to generate draw buffers
 		ImGui::Render();
 	}
